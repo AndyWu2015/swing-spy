@@ -1,0 +1,22 @@
+<idea-plugin>
+  <id>com.liferay.ide.intellij.swingspy</id>
+  <name>Swing Spy</name>
+  <version>1.0</version>
+  <vendor email="andy.wu@liferay.com" url="http://www.liferay.com">Liferay</vendor>
+
+  <description>
+    doulbe click ctrl to show current mouse position in which swing component
+  </description>
+
+  <change-notes>
+    2017.10.17 first version
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <actions>
+      <action id="swingspy" class="com.liferay.ide.intellij.swingspy.SpyAction" text="SwingSpy"/>
+  </actions>
+
+</idea-plugin>
