@@ -6,4 +6,5 @@ But you can't find some thing like that in Intellij IDEA. So this is for Intelli
 ## How to use it ?
 Just install the `swing-spy.jar` as a plugin and restart and double click `Ctrl` key to trigger spy action , it will show a popup which inculdes all components that contain current mouse position.
 
-
+## Effect
+![Effect](https://github.com/AndyWu2015/swing-spy/raw/master/doc/swing-spy.png)
