@@ -16,7 +16,9 @@
   <idea-version since-build="145.0"/>
 
   <actions>
-      <action id="swingspy" class="com.liferay.ide.intellij.swingspy.SpyAction" text="SwingSpy"/>
+      <action id="swingspy" class="com.liferay.ide.intellij.swingspy.SpyAction" text="SwingSpy">
+        <keyboard-shortcut first-keystroke="alt shift F1" keymap="$default" />
+      </action>
   </actions>
 
 </idea-plugin>
