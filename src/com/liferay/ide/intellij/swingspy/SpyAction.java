@@ -6,6 +6,7 @@ import com.intellij.openapi.keymap.impl.ModifierKeyDoubleClickHandler;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.util.ui.UIUtil;
 
+import javax.swing.*;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.MouseInfo;
@@ -25,7 +26,7 @@ public class SpyAction extends AnAction {
 
     public void actionPerformed(AnActionEvent event)
     {
-        Window window = UIUtil.getActiveWindow();
+        Window window = getActiveWindow();
 
         //System.out.println("windows num:"+Window.getWindows().length);
 
@@ -50,6 +51,14 @@ public class SpyAction extends AnAction {
 
 
         stringBuffer.delete(0, stringBuffer.length());
+    }
+
+    private Window getActiveWindow() {
+        Window[] windows = Window.getWindows();
+        for (Window each: windows) {
+            if (each.isVisible() && each.isActive()) return each;
+        }
+        return JOptionPane.getRootFrame();
     }
 
     private void findComponents(Container container, Point point)
